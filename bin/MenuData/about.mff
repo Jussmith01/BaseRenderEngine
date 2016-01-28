@@ -1,0 +1,33 @@
+MenuButtons(mb1): {
+  parameters: [
+  imagefile=Buttons/testbutton
+  soundfile=solid
+  font=../Fonts/FreeSans.ttf
+  scale=1.0
+  x=1000
+  y=1000
+  spread=50
+  orient=down
+  ]
+
+  tbutton: [
+    Ident=Testb1
+    Caption=Test 1
+    Active=yes
+    Action=VAR:null
+  ]
+
+  tbutton: [
+    Ident=testb2
+    Caption=Test 2
+    Active=no
+    Action=MENU:tmenu.mff
+  ]
+  
+  tbutton: [
+    Ident=testb3
+    Caption=Test 3
+    Active=no
+    Action=MENU:tmenu.mff
+  ]
+};

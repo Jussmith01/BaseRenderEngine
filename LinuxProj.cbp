@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="OpenGLEngineProject" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/EngineOpenGL" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/Debug/" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-g" />
+					<Add directory="JuMenu" />
+				</Compiler>
+				<Linker>
+					<Add library="JuMenu" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/EngineOpenGL" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/Release/" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-std=c++11" />
+					<Add option="-fno-strict-aliasing" />
+					<Add directory="JuMenu" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="JuMenu" />
+				</Linker>
+			</Target>
+			<Target title="Debug_Stat_JuMenuAPI">
+				<Option output="lib/linux/JuMenu" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-pg" />
+					<Add option="-fPIC" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg" />
+					<Add library="pthread" />
+				</Linker>
+			</Target>
+			<Target title="Release_Stat_JuMenuAPI">
+				<Option output="lib/linux/JuMenu" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-std=c++11" />
+				</Compiler>
+				<Linker>
+					<Add library="pthread" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-std=c++11" />
+			<Add option="-Wall" />
+			<Add option="-fopenmp -Wno-comment" />
+			<Add directory="include" />
+			<Add directory="include/freetype2" />
+		</Compiler>
+		<Linker>
+			<Add library="glfw3" />
+			<Add library="GLEW" />
+			<Add library="GL" />
+			<Add library="GLU" />
+			<Add library="X11" />
+			<Add library="Xinerama" />
+			<Add library="Xrandr" />
+			<Add library="pthread" />
+			<Add library="Xcursor" />
+			<Add library="Xi" />
+			<Add library="freetype" />
+			<Add library="SOIL" />
+			<Add library="IrrKlang" />
+			<Add library="gomp" />
+			<Add library="boost_system" />
+			<Add library="boost_filesystem" />
+			<Add library="Xxf86vm" />
+			<Add directory="lib/linux" />
+			<Add directory="lib/linux/boost" />
+		</Linker>
+		<Unit filename="JuMenu/JuMenu.cpp">
+			<Option target="Debug_Stat_JuMenuAPI" />
+			<Option target="Release_Stat_JuMenuAPI" />
+		</Unit>
+		<Unit filename="JuMenu/JuMenu.h">
+			<Option target="Debug_Stat_JuMenuAPI" />
+			<Option target="Release_Stat_JuMenuAPI" />
+		</Unit>
+		<Unit filename="JuMenu/JuMenuDeps.h">
+			<Option target="Debug_Stat_JuMenuAPI" />
+			<Option target="Release_Stat_JuMenuAPI" />
+		</Unit>
+		<Unit filename="JuMenu/JuMenuErrs.h">
+			<Option target="Debug_Stat_JuMenuAPI" />
+			<Option target="Release_Stat_JuMenuAPI" />
+		</Unit>
+		<Unit filename="JuMenu/JuMenuResourceManager.cpp">
+			<Option target="Debug_Stat_JuMenuAPI" />
+			<Option target="Release_Stat_JuMenuAPI" />
+		</Unit>
+		<Unit filename="JuMenu/JuMenuResourceManager.h">
+			<Option target="Debug_Stat_JuMenuAPI" />
+			<Option target="Release_Stat_JuMenuAPI" />
+		</Unit>
+		<Unit filename="JuMenu/menuitems/menubutton.cpp">
+			<Option target="Debug_Stat_JuMenuAPI" />
+			<Option target="Release_Stat_JuMenuAPI" />
+		</Unit>
+		<Unit filename="JuMenu/menuitems/menubutton.h">
+			<Option target="Debug_Stat_JuMenuAPI" />
+			<Option target="Release_Stat_JuMenuAPI" />
+		</Unit>
+		<Unit filename="JuMenu/menuitems/mfftools.cpp">
+			<Option target="Debug_Stat_JuMenuAPI" />
+			<Option target="Release_Stat_JuMenuAPI" />
+		</Unit>
+		<Unit filename="JuMenu/menuitems/mfftools.h">
+			<Option target="Debug_Stat_JuMenuAPI" />
+			<Option target="Release_Stat_JuMenuAPI" />
+		</Unit>
+		<Unit filename="JuMenu/resources/imageresource.cpp">
+			<Option target="Debug_Stat_JuMenuAPI" />
+			<Option target="Release_Stat_JuMenuAPI" />
+		</Unit>
+		<Unit filename="JuMenu/resources/imageresource.h">
+			<Option target="Debug_Stat_JuMenuAPI" />
+			<Option target="Release_Stat_JuMenuAPI" />
+		</Unit>
+		<Unit filename="JuMenu/resources/writerresource.cpp">
+			<Option target="Debug_Stat_JuMenuAPI" />
+			<Option target="Release_Stat_JuMenuAPI" />
+		</Unit>
+		<Unit filename="JuMenu/resources/writerresource.h">
+			<Option target="Debug_Stat_JuMenuAPI" />
+			<Option target="Release_Stat_JuMenuAPI" />
+		</Unit>
+		<Unit filename="src/Engine/Loaders/properties.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/Engine/Loaders/properties.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/Engine/States/MenuStates/mainmenustate.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/Engine/States/MenuStates/mainmenustate.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/Engine/States/introstate.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/Engine/States/introstate.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/Engine/Tools/flaghandler.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/Engine/Tools/inputcontrol.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/Engine/Tools/inputcontrol.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/Engine/Tools/tools.hpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/Engine/engine.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/Engine/engine.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/Engine/eventcallback.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/Engine/eventcallback.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/Engine/state.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/EventStateBase.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
